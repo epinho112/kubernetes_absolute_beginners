@@ -1,0 +1,45 @@
+1 - Use the deployment command to create a deployment
+2 - Check the status of the deployment
+3 - Delete deployment just created
+4 - Crete the deployment and check the status right away
+    Tries to brings up the pods one at a time
+    after all pods have been created successful than deployment is successful
+5 - Use the rollout history deployment
+    there is a revision and a change Cause
+6 - Delete the deployment
+    Wait pods to be terminated and go away
+7 - Use the rollout history deployment with the --record
+8 - check deployment status
+    once complete
+9 - Use the rollout history deployment
+    now it has something on Change Cause
+    it is recording the command
+10 - Describe the deployment
+     annotation section has the command to see recording
+12 - Make a change to the image using the kubectl edit
+     Change image to a lower version
+     Use Docker hub to see wich one would be a smaller version
+13 - use the status commnad to see the changes rolling out
+     old pods being deleted and new ones are being created
+     There will alwasy be Pods running
+14 - Describe the deployment and you should still see the changes on the Events
+     on the annotation you will see the previous command run
+15 - Lets change the image using the Kubectl edit command or use kubectl set image deployment
+16 - Check deployment status
+17 - check the deployment history and see there are more revisions and recording commands
+18 - Check the pods
+19 - We can rollback the Revision in case something is going t wrong
+     do that by running the kubectl rollout undo command
+20 - check the deployment status to see the pods being deleted and recreated
+21 - Describe the deployment check the image to see if it was reverted
+22 - check the deployment history
+     Now there is a 4th revision and no revision 2, because revision 2 became revision 4
+23 - change the image with kube edit to a image that does not exist
+24 - check the status
+     it will not be able to pull image and containers would fail and not succesfully deploy this deployment
+25 - check the deployment with kubectl get
+     There wil have more images that will not complete 
+     Termited one pod and it stalls
+26 - check deployment history
+27 - use the rollout command
+28 - check the pods and all of them will be on a good state now
