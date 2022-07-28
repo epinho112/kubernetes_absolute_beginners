@@ -3,3 +3,5 @@ kubectl get deployments
 kubectl get replicaset
 kubectl get pods
 kubectl get all
+kubectl describe deployment <deployment-name>
+kubectl explain deployment
